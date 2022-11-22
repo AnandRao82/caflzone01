@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-VM-Backup",
+      "apiVersion": "2022-06-01",
+      "location": "westus",
+      "identity": {
+        "PrincipalId": "41af17ee-3b13-4055-b23d-de2bf73dc2c9",
+        "TenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
+        "Type": "SystemAssigned"
+      },
+      "properties": {
+        "Description": "Enforce backup for all virtual machines by deploying a recovery services vault in the same location and resource group as the virtual machine. Doing this is useful when different application teams in your organization are allocated separate resource groups and need to manage their own backups and restores. You can optionally exclude virtual machines containing a specified tag to control the scope of assignment. See https://aka.ms/AzureVMAppCentricBackupExcludeTag.",
+        "DisplayName": "Configure backup on virtual machines without a given tag to a new recovery services vault with a default policy",
+        "EnforcementMode": "Default",
+        "NonComplianceMessages": null,
+        "NotScopes": null,
+        "Parameters": {},
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/98d0b9f8-fd90-49c9-88e2-d3baf3b0dd86",
+        "Scope": "/providers/Microsoft.Management/managementGroups/CAF01-identity"
+      }
+    }
+  ],
+  "outputs": {}
+}

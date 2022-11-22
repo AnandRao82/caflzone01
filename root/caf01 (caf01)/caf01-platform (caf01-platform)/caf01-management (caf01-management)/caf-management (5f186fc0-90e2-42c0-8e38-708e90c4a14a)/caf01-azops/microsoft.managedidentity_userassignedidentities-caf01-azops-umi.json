@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+      "name": "CAF01-azops-umi",
+      "apiVersion": "2022-01-31-PREVIEW",
+      "location": "westus",
+      "tags": {},
+      "properties": {
+        "clientId": "23531255-24e8-4130-b568-d0c562538fe3",
+        "principalId": "a9ee2de7-bd9c-4916-bbaf-22b40edb03a0",
+        "tenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d"
+      }
+    }
+  ],
+  "outputs": {}
+}
