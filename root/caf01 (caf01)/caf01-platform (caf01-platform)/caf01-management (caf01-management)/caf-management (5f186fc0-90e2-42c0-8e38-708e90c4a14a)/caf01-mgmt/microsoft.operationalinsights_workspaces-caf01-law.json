@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "name": "CAF01-law",
+      "apiVersion": "2022-10-01",
+      "location": "westus",
+      "tags": null,
+      "properties": {
+        "customerId": "816e3fe5-0791-46f8-9483-3dda39e6c905",
+        "features": {
+          "enableLogAccessUsingOnlyResourcePermissions": true,
+          "legacy": 0,
+          "searchVersion": 1
+        },
+        "publicNetworkAccessForIngestion": "Enabled",
+        "publicNetworkAccessForQuery": "Enabled",
+        "retentionInDays": 30,
+        "sku": {
+          "name": "PerGB2018"
+        },
+        "workspaceCapping": {
+          "dailyQuotaGb": -1,
+          "dataIngestionStatus": "RespectQuota"
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

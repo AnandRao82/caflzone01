@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Resources/deploymentScripts",
+      "name": "CAF01-azops-GitHub",
+      "kind": "AzurePowerShell",
+      "apiVersion": "2020-10-01",
+      "location": "westus",
+      "tags": null,
+      "properties": {
+        "arguments": "-KeyVault CAF01-azopsk2aqke5ey5db2 -NewRepositoryName caflzone01 -GitHubUserNameOrOrg AnandRao82 -SPNSecretName SPNSecret -SpnAppId cf1be856-3817-470c-869b-db646e56427f -PATSecretName PATSecret -AzureTenantId 40b38c33-39b8-44ac-82f4-c0195458f65d -EnterpriseScalePrefix CAF01 -AzureSubscriptionId 5f186fc0-90e2-42c0-8e38-708e90c4a14a",
+        "azPowerShellVersion": "5.5",
+        "cleanupPreference": "Always",
+        "containerSettings": {},
+        "outputs": {
+          "New Repository": "caflzone01"
+        },
+        "primaryScriptUri": "https://raw.githubusercontent.com/Azure/AzOps/main/scripts/ARMAzOpsSetup.ps1",
+        "retentionInterval": "P1D",
+        "status": {
+          "containerInstanceId": "/subscriptions/5f186fc0-90e2-42c0-8e38-708e90c4a14a/resourceGroups/CAF01-azops/providers/Microsoft.ContainerInstance/containerGroups/6ciu5jzxyxpt2azscripts",
+          "storageAccountId": "/subscriptions/5f186fc0-90e2-42c0-8e38-708e90c4a14a/resourceGroups/CAF01-azops/providers/Microsoft.Storage/storageAccounts/6ciu5jzxyxpt2azscripts"
+        },
+        "timeout": "PT30M"
+      }
+    }
+  ],
+  "outputs": {}
+}
