@@ -11,12 +11,12 @@
   "resources": [
     {
       "type": "Microsoft.Authorization/roleAssignments",
-      "name": "1a432109-6ab6-4229-bcd6-a317fdfff3cf",
+      "name": "7b3374e9-d843-45bd-a59b-18b04f7c34bc",
       "apiVersion": "2022-04-01",
       "properties": {
         "DisplayName": null,
         "ObjectType": "Unknown",
-        "PrincipalId": "0ad81acf-0775-41ea-b5c5-8d47e02eaf53",
+        "PrincipalId": "1550326a-421d-4d3d-b92f-8e5ebbc51787",
         "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
         "RoleDefinitionName": "Contributor"
       }
