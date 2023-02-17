@@ -211,7 +211,7 @@
                       },
                       "resources": [
                         {
-                          "apiVersion": "2015-06-15T00:00:00Z",
+                          "apiVersion": "2015-06-15",
                           "location": "[resourceGroup().location]",
                           "name": "[concat(variables('vmName'),'/joindomain')]",
                           "properties": {

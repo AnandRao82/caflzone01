@@ -144,7 +144,7 @@
                       },
                       "resources": [
                         {
-                          "apiVersion": "2021-04-01T00:00:00Z",
+                          "apiVersion": "2021-04-01",
                           "dependsOn": [],
                           "location": "[parameters('vNetLocation')]",
                           "name": "[concat('alz-vnet-rg-', parameters('vNetLocation'), '-', substring(uniqueString(subscription().id),0,6))]",
@@ -157,7 +157,7 @@
                               "parameters": {},
                               "resources": [
                                 {
-                                  "apiVersion": "2021-04-01T00:00:00Z",
+                                  "apiVersion": "2021-04-01",
                                   "location": "[parameters('vNetLocation')]",
                                   "name": "[parameters('vNetRgName')]",
                                   "properties": {},
@@ -170,7 +170,7 @@
                           "type": "Microsoft.Resources/deployments"
                         },
                         {
-                          "apiVersion": "2021-04-01T00:00:00Z",
+                          "apiVersion": "2021-04-01",
                           "dependsOn": [
                             "[concat('alz-vnet-rg-', parameters('vNetLocation'), '-', substring(uniqueString(subscription().id),0,6))]"
                           ],
@@ -184,7 +184,7 @@
                               "parameters": {},
                               "resources": [
                                 {
-                                  "apiVersion": "2021-02-01T00:00:00Z",
+                                  "apiVersion": "2021-02-01",
                                   "dependsOn": [],
                                   "location": "[parameters('vNetLocation')]",
                                   "name": "[parameters('vNetName')]",
@@ -201,7 +201,7 @@
                                   "type": "Microsoft.Network/virtualNetworks"
                                 },
                                 {
-                                  "apiVersion": "2021-02-01T00:00:00Z",
+                                  "apiVersion": "2021-02-01",
                                   "dependsOn": [
                                     "[parameters('vNetName')]"
                                   ],
@@ -218,7 +218,7 @@
                                   "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
                                 },
                                 {
-                                  "apiVersion": "2021-04-01T00:00:00Z",
+                                  "apiVersion": "2021-04-01",
                                   "dependsOn": [
                                     "[parameters('vNetName')]"
                                   ],
@@ -252,7 +252,7 @@
                                       },
                                       "resources": [
                                         {
-                                          "apiVersion": "2021-02-01T00:00:00Z",
+                                          "apiVersion": "2021-02-01",
                                           "name": "[[concat(parameters('hubName'),'/',last(split(parameters('remoteVirtualNetwork'),'/')))]",
                                           "properties": {
                                             "allowForwardedTraffic": true,

@@ -140,7 +140,7 @@
                       },
                       "resources": [
                         {
-                          "apiVersion": "2020-05-01T00:00:00Z",
+                          "apiVersion": "2020-05-01",
                           "location": "[parameters('location')]",
                           "name": "[take(concat('NetworkWatcher_', toLower(parameters('location')),  '/', parameters('networkSecurityGroupName'), '-', parameters('resourceGroupName'), '-flowlog' ), 80)]",
                           "properties": {

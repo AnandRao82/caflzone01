@@ -101,14 +101,14 @@
                       },
                       "resources": [
                         {
-                          "apiVersion": "2018-05-01T00:00:00Z",
+                          "apiVersion": "2018-05-01",
                           "location": "[deployment().location]",
                           "name": "[parameters('rgName')]",
                           "properties": {},
                           "type": "Microsoft.Resources/resourceGroups"
                         },
                         {
-                          "apiVersion": "2018-05-01T00:00:00Z",
+                          "apiVersion": "2018-05-01",
                           "dependsOn": [
                             "[resourceId('Microsoft.Resources/resourceGroups/', parameters('rgName'))]"
                           ],
@@ -122,14 +122,14 @@
                               "parameters": {},
                               "resources": [
                                 {
-                                  "apiVersion": "2019-09-01T00:00:00Z",
+                                  "apiVersion": "2019-09-01",
                                   "dependsOn": [],
                                   "location": "[parameters('fwpolicy').location]",
                                   "name": "[parameters('fwpolicy').firewallPolicyName]",
                                   "properties": {},
                                   "resources": [
                                     {
-                                      "apiVersion": "2019-09-01T00:00:00Z",
+                                      "apiVersion": "2019-09-01",
                                       "dependsOn": [
                                         "[resourceId('Microsoft.Network/firewallPolicies',parameters('fwpolicy').firewallPolicyName)]"
                                       ],
