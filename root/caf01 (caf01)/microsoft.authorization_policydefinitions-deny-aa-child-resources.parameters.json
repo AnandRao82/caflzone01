@@ -4,37 +4,38 @@
   "parameters": {
     "input": {
       "value": {
-        "Name": "Deny-AA-child-resources",
-        "ResourceType": "Microsoft.Authorization/policyDefinitions",
-        "Properties": {
-          "Description": "This policy denies the creation of child resources on the Automation Account",
-          "DisplayName": "No child resources in Automation Account",
-          "Metadata": {
-            "version": "1.0.0",
-            "category": "Automation",
-            "source": "https://github.com/Azure/Enterprise-Scale/",
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "Deny-AA-child-resources",
+        "properties": {
+          "description": "This policy denies the creation of child resources on the Automation Account",
+          "displayName": "No child resources in Automation Account",
+          "metadata": {
             "alzCloudEnvironments": [
               "AzureCloud",
               "AzureUSGovernment"
-            ]
+            ],
+            "category": "Automation",
+            "source": "https://github.com/Azure/Enterprise-Scale/",
+            "version": "1.0.0"
           },
-          "Mode": "Indexed",
-          "Parameters": {
+          "mode": "Indexed",
+          "parameters": {
             "effect": {
-              "type": "String",
-              "metadata": {
-                "displayName": "Effect",
-                "description": "Enable or disable the execution of the policy"
-              },
               "allowedValues": [
                 "Audit",
                 "Deny",
                 "Disabled"
               ],
-              "defaultValue": "Deny"
+              "defaultValue": "Deny",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
             }
           },
-          "PolicyRule": {
+          "policyRule": {
             "if": {
               "allOf": [
                 {
@@ -54,7 +55,8 @@
               "effect": "[parameters('effect')]"
             }
           }
-        }
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
       }
     }
   }

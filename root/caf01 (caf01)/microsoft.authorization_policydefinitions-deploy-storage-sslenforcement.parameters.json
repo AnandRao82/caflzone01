@@ -4,55 +4,56 @@
   "parameters": {
     "input": {
       "value": {
-        "Name": "Deploy-Storage-sslEnforcement",
-        "ResourceType": "Microsoft.Authorization/policyDefinitions",
-        "Properties": {
-          "Description": "Deploy a specific min TLS version requirement and enforce SSL on Azure Storage. Enables secure server to client by enforce minimal Tls Version to secure the connection between your database server and your client applications helps protect against 'man in the middle' attacks by encrypting the data stream between the server and your application. This configuration enforces that SSL is always enabled for accessing your Azure Storage.",
-          "DisplayName": "Azure Storage deploy a specific min TLS version requirement and enforce SSL/HTTPS ",
-          "Metadata": {
-            "version": "1.1.0",
-            "category": "Storage",
-            "source": "https://github.com/Azure/Enterprise-Scale/",
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "Deploy-Storage-sslEnforcement",
+        "properties": {
+          "description": "Deploy a specific min TLS version requirement and enforce SSL on Azure Storage. Enables secure server to client by enforce minimal Tls Version to secure the connection between your database server and your client applications helps protect against 'man in the middle' attacks by encrypting the data stream between the server and your application. This configuration enforces that SSL is always enabled for accessing your Azure Storage.",
+          "displayName": "Azure Storage deploy a specific min TLS version requirement and enforce SSL/HTTPS ",
+          "metadata": {
             "alzCloudEnvironments": [
               "AzureCloud",
               "AzureChinaCloud",
               "AzureUSGovernment"
-            ]
+            ],
+            "category": "Storage",
+            "source": "https://github.com/Azure/Enterprise-Scale/",
+            "version": "1.1.0"
           },
-          "Mode": "Indexed",
-          "Parameters": {
+          "mode": "Indexed",
+          "parameters": {
             "effect": {
-              "type": "String",
-              "metadata": {
-                "displayName": "Effect Azure Storage",
-                "description": "Enable or disable the execution of the policy minimum TLS version Azure STorage"
-              },
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
               ],
-              "defaultValue": "DeployIfNotExists"
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy minimum TLS version Azure STorage",
+                "displayName": "Effect Azure Storage"
+              },
+              "type": "String"
             },
             "minimumTlsVersion": {
-              "type": "String",
-              "metadata": {
-                "displayName": "Select TLS version for Azure Storage server",
-                "description": "Select version minimum TLS version Azure STorage to enforce"
-              },
               "allowedValues": [
                 "TLS1_2",
                 "TLS1_1",
                 "TLS1_0"
               ],
-              "defaultValue": "TLS1_2"
+              "defaultValue": "TLS1_2",
+              "metadata": {
+                "description": "Select version minimum TLS version Azure STorage to enforce",
+                "displayName": "Select TLS version for Azure Storage server"
+              },
+              "type": "String"
             }
           },
-          "PolicyRule": {
+          "policyRule": {
             "if": {
               "allOf": [
                 {
-                  "field": "type",
-                  "equals": "Microsoft.Storage/storageAccounts"
+                  "equals": "Microsoft.Storage/storageAccounts",
+                  "field": "type"
                 },
                 {
                   "anyOf": [
@@ -69,18 +70,61 @@
               ]
             },
             "then": {
-              "effect": "[parameters('effect')]",
               "details": {
-                "type": "Microsoft.Storage/storageAccounts",
+                "deployment": {
+                  "properties": {
+                    "mode": "Incremental",
+                    "parameters": {
+                      "location": {
+                        "value": "[field('location')]"
+                      },
+                      "minimumTlsVersion": {
+                        "value": "[parameters('minimumTlsVersion')]"
+                      },
+                      "resourceName": {
+                        "value": "[field('name')]"
+                      }
+                    },
+                    "template": {
+                      "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                      "contentVersion": "1.0.0.0",
+                      "outputs": {},
+                      "parameters": {
+                        "location": {
+                          "type": "String"
+                        },
+                        "minimumTlsVersion": {
+                          "type": "String"
+                        },
+                        "resourceName": {
+                          "type": "String"
+                        }
+                      },
+                      "resources": [
+                        {
+                          "apiVersion": "2019-06-01T00:00:00Z",
+                          "location": "[parameters('location')]",
+                          "name": "[concat(parameters('resourceName'))]",
+                          "properties": {
+                            "minimumTlsVersion": "[parameters('minimumTlsVersion')]",
+                            "supportsHttpsTrafficOnly": true
+                          },
+                          "type": "Microsoft.Storage/storageAccounts"
+                        }
+                      ],
+                      "variables": {}
+                    }
+                  }
+                },
                 "existenceCondition": {
                   "allOf": [
                     {
-                      "field": "Microsoft.Storage/storageAccounts/supportsHttpsTrafficOnly",
-                      "equals": "true"
+                      "equals": "true",
+                      "field": "Microsoft.Storage/storageAccounts/supportsHttpsTrafficOnly"
                     },
                     {
-                      "field": "Microsoft.Storage/storageAccounts/minimumTlsVersion",
-                      "equals": "[parameters('minimumTlsVersion')]"
+                      "equals": "[parameters('minimumTlsVersion')]",
+                      "field": "Microsoft.Storage/storageAccounts/minimumTlsVersion"
                     }
                   ]
                 },
@@ -88,55 +132,13 @@
                 "roleDefinitionIds": [
                   "/providers/microsoft.authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635"
                 ],
-                "deployment": {
-                  "properties": {
-                    "mode": "Incremental",
-                    "template": {
-                      "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-                      "contentVersion": "1.0.0.0",
-                      "parameters": {
-                        "resourceName": {
-                          "type": "String"
-                        },
-                        "minimumTlsVersion": {
-                          "type": "String"
-                        },
-                        "location": {
-                          "type": "String"
-                        }
-                      },
-                      "variables": {},
-                      "resources": [
-                        {
-                          "type": "Microsoft.Storage/storageAccounts",
-                          "apiVersion": "2019-06-01",
-                          "name": "[concat(parameters('resourceName'))]",
-                          "location": "[parameters('location')]",
-                          "properties": {
-                            "supportsHttpsTrafficOnly": true,
-                            "minimumTlsVersion": "[parameters('minimumTlsVersion')]"
-                          }
-                        }
-                      ],
-                      "outputs": {}
-                    },
-                    "parameters": {
-                      "resourceName": {
-                        "value": "[field('name')]"
-                      },
-                      "minimumTlsVersion": {
-                        "value": "[parameters('minimumTlsVersion')]"
-                      },
-                      "location": {
-                        "value": "[field('location')]"
-                      }
-                    }
-                  }
-                }
-              }
+                "type": "Microsoft.Storage/storageAccounts"
+              },
+              "effect": "[parameters('effect')]"
             }
           }
-        }
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
       }
     }
   }

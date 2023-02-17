@@ -12,20 +12,20 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "Deploy-ASC-Monitoring",
+      "kind": "policyassignments",
       "apiVersion": "2022-06-01",
       "location": "westus",
       "identity": {
-        "PrincipalId": "3710994e-ecc4-43d5-89b8-ae1548486c22",
-        "TenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
-        "Type": "SystemAssigned"
+        "principalId": "3710994e-ecc4-43d5-89b8-ae1548486c22",
+        "tenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
+        "type": "SystemAssigned"
       },
       "properties": {
-        "Description": "Azure Security Benchmark policy initiative",
-        "DisplayName": "Azure Security Benchmark",
-        "EnforcementMode": "Default",
-        "NonComplianceMessages": null,
-        "NotScopes": null,
-        "Parameters": {
+        "description": "Azure Security Benchmark policy initiative",
+        "displayName": "Azure Security Benchmark",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "parameters": {
           "autoProvisioningOfTheLogAnalyticsAgentShouldBeEnabledOnYourSubscriptionMonitoringEffect": {
             "value": "Disabled"
           },
@@ -45,8 +45,8 @@
             "value": "Disabled"
           }
         },
-        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
-        "Scope": "/providers/Microsoft.Management/managementGroups/CAF01"
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+        "scope": "/providers/Microsoft.Management/managementGroups/CAF01"
       }
     }
   ],

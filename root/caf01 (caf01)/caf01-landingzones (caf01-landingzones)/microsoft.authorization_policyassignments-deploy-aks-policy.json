@@ -12,22 +12,21 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "Deploy-AKS-Policy",
+      "kind": "policyassignments",
       "apiVersion": "2022-06-01",
       "location": "westus",
       "identity": {
-        "PrincipalId": "f4e5127b-34ea-4dd8-9f08-2419438b2b44",
-        "TenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
-        "Type": "SystemAssigned"
+        "principalId": "f4e5127b-34ea-4dd8-9f08-2419438b2b44",
+        "tenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
+        "type": "SystemAssigned"
       },
       "properties": {
-        "Description": "Use Azure Policy Add-on to manage and report on the compliance state of your Azure Kubernetes Service (AKS) clusters. For more information, see https://aka.ms/akspolicydoc.",
-        "DisplayName": "Deploy Azure Policy Add-on to Azure Kubernetes Service clusters",
-        "EnforcementMode": "Default",
-        "NonComplianceMessages": null,
-        "NotScopes": null,
-        "Parameters": null,
-        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a8eff44f-8c92-45c3-a3fb-9880802d67a7",
-        "Scope": "/providers/Microsoft.Management/managementGroups/CAF01-landingzones"
+        "description": "Use Azure Policy Add-on to manage and report on the compliance state of your Azure Kubernetes Service (AKS) clusters. For more information, see https://aka.ms/akspolicydoc.",
+        "displayName": "Deploy Azure Policy Add-on to Azure Kubernetes Service clusters",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a8eff44f-8c92-45c3-a3fb-9880802d67a7",
+        "scope": "/providers/Microsoft.Management/managementGroups/CAF01-landingzones"
       }
     }
   ],

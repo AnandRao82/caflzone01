@@ -4,55 +4,56 @@
   "parameters": {
     "input": {
       "value": {
-        "Name": "Deploy-SQL-minTLS",
-        "ResourceType": "Microsoft.Authorization/policyDefinitions",
-        "Properties": {
-          "Description": "Deploys a specific min TLS version requirement and enforce SSL on SQL servers. Enables secure server to client by enforce  minimal Tls Version to secure the connection between your database server and your client applications helps protect against 'man in the middle' attacks by encrypting the data stream between the server and your application. This configuration enforces that SSL is always enabled for accessing your database server.",
-          "DisplayName": "SQL servers deploys a specific min TLS version requirement.",
-          "Metadata": {
-            "version": "1.0.0",
-            "category": "SQL",
-            "source": "https://github.com/Azure/Enterprise-Scale/",
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "Deploy-SQL-minTLS",
+        "properties": {
+          "description": "Deploys a specific min TLS version requirement and enforce SSL on SQL servers. Enables secure server to client by enforce  minimal Tls Version to secure the connection between your database server and your client applications helps protect against 'man in the middle' attacks by encrypting the data stream between the server and your application. This configuration enforces that SSL is always enabled for accessing your database server.",
+          "displayName": "SQL servers deploys a specific min TLS version requirement.",
+          "metadata": {
             "alzCloudEnvironments": [
               "AzureCloud",
               "AzureChinaCloud",
               "AzureUSGovernment"
-            ]
+            ],
+            "category": "SQL",
+            "source": "https://github.com/Azure/Enterprise-Scale/",
+            "version": "1.0.0"
           },
-          "Mode": "Indexed",
-          "Parameters": {
+          "mode": "Indexed",
+          "parameters": {
             "effect": {
-              "type": "String",
-              "metadata": {
-                "displayName": "Effect SQL servers",
-                "description": "Enable or disable the execution of the policy minimum TLS version SQL servers"
-              },
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
               ],
-              "defaultValue": "DeployIfNotExists"
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy minimum TLS version SQL servers",
+                "displayName": "Effect SQL servers"
+              },
+              "type": "String"
             },
             "minimalTlsVersion": {
-              "type": "String",
-              "metadata": {
-                "displayName": "Select version for SQL server",
-                "description": "Select version minimum TLS version SQL servers to enforce"
-              },
               "allowedValues": [
                 "1.2",
                 "1.1",
                 "1.0"
               ],
-              "defaultValue": "1.2"
+              "defaultValue": "1.2",
+              "metadata": {
+                "description": "Select version minimum TLS version SQL servers to enforce",
+                "displayName": "Select version for SQL server"
+              },
+              "type": "String"
             }
           },
-          "PolicyRule": {
+          "policyRule": {
             "if": {
               "allOf": [
                 {
-                  "field": "type",
-                  "equals": "Microsoft.Sql/servers"
+                  "equals": "Microsoft.Sql/servers",
+                  "field": "type"
                 },
                 {
                   "field": "Microsoft.Sql/servers/minimalTlsVersion",
@@ -61,14 +62,56 @@
               ]
             },
             "then": {
-              "effect": "[parameters('effect')]",
               "details": {
-                "type": "Microsoft.Sql/servers",
+                "deployment": {
+                  "properties": {
+                    "mode": "Incremental",
+                    "parameters": {
+                      "location": {
+                        "value": "[field('location')]"
+                      },
+                      "minimalTlsVersion": {
+                        "value": "[parameters('minimalTlsVersion')]"
+                      },
+                      "resourceName": {
+                        "value": "[field('name')]"
+                      }
+                    },
+                    "template": {
+                      "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                      "contentVersion": "1.0.0.0",
+                      "outputs": {},
+                      "parameters": {
+                        "location": {
+                          "type": "String"
+                        },
+                        "minimalTlsVersion": {
+                          "type": "String"
+                        },
+                        "resourceName": {
+                          "type": "String"
+                        }
+                      },
+                      "resources": [
+                        {
+                          "apiVersion": "2019-06-01-preview",
+                          "location": "[parameters('location')]",
+                          "name": "[concat(parameters('resourceName'))]",
+                          "properties": {
+                            "minimalTlsVersion": "[parameters('minimalTlsVersion')]"
+                          },
+                          "type": "Microsoft.Sql/servers"
+                        }
+                      ],
+                      "variables": {}
+                    }
+                  }
+                },
                 "existenceCondition": {
                   "allOf": [
                     {
-                      "field": "Microsoft.Sql/servers/minimalTlsVersion",
-                      "equals": "[parameters('minimalTlsVersion')]"
+                      "equals": "[parameters('minimalTlsVersion')]",
+                      "field": "Microsoft.Sql/servers/minimalTlsVersion"
                     }
                   ]
                 },
@@ -76,54 +119,13 @@
                 "roleDefinitionIds": [
                   "/providers/microsoft.authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635"
                 ],
-                "deployment": {
-                  "properties": {
-                    "mode": "Incremental",
-                    "template": {
-                      "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-                      "contentVersion": "1.0.0.0",
-                      "parameters": {
-                        "resourceName": {
-                          "type": "String"
-                        },
-                        "minimalTlsVersion": {
-                          "type": "String"
-                        },
-                        "location": {
-                          "type": "String"
-                        }
-                      },
-                      "variables": {},
-                      "resources": [
-                        {
-                          "type": "Microsoft.Sql/servers",
-                          "apiVersion": "2019-06-01-preview",
-                          "name": "[concat(parameters('resourceName'))]",
-                          "location": "[parameters('location')]",
-                          "properties": {
-                            "minimalTlsVersion": "[parameters('minimalTlsVersion')]"
-                          }
-                        }
-                      ],
-                      "outputs": {}
-                    },
-                    "parameters": {
-                      "resourceName": {
-                        "value": "[field('name')]"
-                      },
-                      "minimalTlsVersion": {
-                        "value": "[parameters('minimalTlsVersion')]"
-                      },
-                      "location": {
-                        "value": "[field('location')]"
-                      }
-                    }
-                  }
-                }
-              }
+                "type": "Microsoft.Sql/servers"
+              },
+              "effect": "[parameters('effect')]"
             }
           }
-        }
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
       }
     }
   }

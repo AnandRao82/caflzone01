@@ -14,11 +14,10 @@
       "name": "a0f680d4-b2a0-5c4f-8fde-cb6996966b90",
       "apiVersion": "2022-04-01",
       "properties": {
-        "DisplayName": null,
-        "ObjectType": "Unknown",
-        "PrincipalId": "abaf7f0f-7d97-4023-9b10-ac1dce9ac016",
-        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
-        "RoleDefinitionName": "Contributor"
+        "principalId": "abaf7f0f-7d97-4023-9b10-ac1dce9ac016",
+        "principalType": "ServicePrincipal",
+        "roleDefinitionId": "/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
+        "scope": "/providers/Microsoft.Management/managementGroups/CAF01-management"
       }
     }
   ],

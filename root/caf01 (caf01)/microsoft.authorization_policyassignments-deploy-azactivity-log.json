@@ -12,20 +12,20 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "Deploy-AzActivity-Log",
+      "kind": "policyassignments",
       "apiVersion": "2022-06-01",
       "location": "westus",
       "identity": {
-        "PrincipalId": "60ffd50c-701e-457f-aa2f-3c355ae57f2f",
-        "TenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
-        "Type": "SystemAssigned"
+        "principalId": "60ffd50c-701e-457f-aa2f-3c355ae57f2f",
+        "tenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
+        "type": "SystemAssigned"
       },
       "properties": {
-        "Description": "Deploys the diagnostic settings for Azure Activity to stream subscriptions audit logs to a Log Analytics workspace to monitor subscription-level events",
-        "DisplayName": "Configure Azure Activity logs to stream to specified Log Analytics workspace",
-        "EnforcementMode": "Default",
-        "NonComplianceMessages": null,
-        "NotScopes": null,
-        "Parameters": {
+        "description": "Deploys the diagnostic settings for Azure Activity to stream subscriptions audit logs to a Log Analytics workspace to monitor subscription-level events",
+        "displayName": "Configure Azure Activity logs to stream to specified Log Analytics workspace",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "parameters": {
           "logAnalytics": {
             "value": "/subscriptions/5f186fc0-90e2-42c0-8e38-708e90c4a14a/resourceGroups/CAF01-mgmt/providers/Microsoft.OperationalInsights/workspaces/CAF01-law"
           },
@@ -33,8 +33,8 @@
             "value": "True"
           }
         },
-        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2465583e-4e78-4c15-b6be-a36cbc7c8b0f",
-        "Scope": "/providers/Microsoft.Management/managementGroups/CAF01"
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2465583e-4e78-4c15-b6be-a36cbc7c8b0f",
+        "scope": "/providers/Microsoft.Management/managementGroups/CAF01"
       }
     }
   ],
