@@ -61,7 +61,7 @@
                     {
                       "allOf": [
                         {
-                          "less": "2019-04-01T00:00:00Z",
+                          "less": "2019-04-01",
                           "value": "[requestContext().apiVersion]"
                         },
                         {

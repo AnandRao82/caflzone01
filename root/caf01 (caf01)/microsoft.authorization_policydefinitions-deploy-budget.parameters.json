@@ -177,7 +177,7 @@
                       },
                       "resources": [
                         {
-                          "apiVersion": "2019-10-01T00:00:00Z",
+                          "apiVersion": "2019-10-01",
                           "name": "[parameters('budgetName')]",
                           "properties": {
                             "amount": "[parameters('amount')]",

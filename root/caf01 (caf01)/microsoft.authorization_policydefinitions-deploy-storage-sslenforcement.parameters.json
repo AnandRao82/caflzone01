@@ -102,7 +102,7 @@
                       },
                       "resources": [
                         {
-                          "apiVersion": "2019-06-01T00:00:00Z",
+                          "apiVersion": "2019-06-01",
                           "location": "[parameters('location')]",
                           "name": "[concat(parameters('resourceName'))]",
                           "properties": {

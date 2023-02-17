@@ -117,7 +117,7 @@
                       },
                       "resources": [
                         {
-                          "apiVersion": "2019-10-01T00:00:00Z",
+                          "apiVersion": "2019-10-01",
                           "name": "[concat(variables('resourceGroupName'), '.', variables('securityGroupName'))]",
                           "properties": {
                             "mode": "Incremental",
@@ -126,7 +126,7 @@
                               "contentVersion": "1.0.0.0",
                               "resources": [
                                 {
-                                  "apiVersion": "2019-06-01T00:00:00Z",
+                                  "apiVersion": "2019-06-01",
                                   "kind": "StorageV2",
                                   "location": "[parameters('location')]",
                                   "name": "[variables('storageAccountName')]",
@@ -144,7 +144,7 @@
                           "type": "Microsoft.Resources/deployments"
                         },
                         {
-                          "apiVersion": "2019-10-01T00:00:00Z",
+                          "apiVersion": "2019-10-01",
                           "dependsOn": [
                             "[concat(variables('resourceGroupName'), '.', variables('securityGroupName'))]"
                           ],
@@ -156,13 +156,13 @@
                               "contentVersion": "1.0.0.0",
                               "resources": [
                                 {
-                                  "apiVersion": "2020-05-01T00:00:00Z",
+                                  "apiVersion": "2020-05-01",
                                   "location": "[parameters('location')]",
                                   "name": "[concat('NetworkWatcher_', toLower(parameters('location')))]",
                                   "properties": {},
                                   "resources": [
                                     {
-                                      "apiVersion": "2019-11-01T00:00:00Z",
+                                      "apiVersion": "2019-11-01",
                                       "dependsOn": [
                                         "[concat('NetworkWatcher_', toLower(parameters('location')))]"
                                       ],
