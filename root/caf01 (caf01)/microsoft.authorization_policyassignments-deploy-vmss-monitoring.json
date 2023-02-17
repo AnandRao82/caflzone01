@@ -12,26 +12,26 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "Deploy-VMSS-Monitoring",
+      "kind": "policyassignments",
       "apiVersion": "2022-06-01",
       "location": "westus",
       "identity": {
-        "PrincipalId": "cbf92740-628c-4bf3-a338-35f53f1b6577",
-        "TenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
-        "Type": "SystemAssigned"
+        "principalId": "cbf92740-628c-4bf3-a338-35f53f1b6577",
+        "tenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
+        "type": "SystemAssigned"
       },
       "properties": {
-        "Description": "Enable Azure Monitor for the Virtual Machine Scale Sets in the specified scope (Management group, Subscription or resource group). Takes Log Analytics workspace as parameter. Note: if your scale set upgradePolicy is set to Manual, you need to apply the extension to the all VMs in the set by calling upgrade on them. In CLI this would be az vmss update-instances.",
-        "DisplayName": "Enable Azure Monitor for Virtual Machine Scale Sets",
-        "EnforcementMode": "Default",
-        "NonComplianceMessages": null,
-        "NotScopes": null,
-        "Parameters": {
+        "description": "Enable Azure Monitor for the Virtual Machine Scale Sets in the specified scope (Management group, Subscription or resource group). Takes Log Analytics workspace as parameter. Note: if your scale set upgradePolicy is set to Manual, you need to apply the extension to the all VMs in the set by calling upgrade on them. In CLI this would be az vmss update-instances.",
+        "displayName": "Enable Azure Monitor for Virtual Machine Scale Sets",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "parameters": {
           "logAnalytics_1": {
             "value": "/subscriptions/5f186fc0-90e2-42c0-8e38-708e90c4a14a/resourceGroups/CAF01-mgmt/providers/Microsoft.OperationalInsights/workspaces/CAF01-law"
           }
         },
-        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/75714362-cae7-409e-9b99-a8e5075b7fad",
-        "Scope": "/providers/Microsoft.Management/managementGroups/CAF01"
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/75714362-cae7-409e-9b99-a8e5075b7fad",
+        "scope": "/providers/Microsoft.Management/managementGroups/CAF01"
       }
     }
   ],

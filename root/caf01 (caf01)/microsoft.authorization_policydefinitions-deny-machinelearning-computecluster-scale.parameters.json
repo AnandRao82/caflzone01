@@ -4,69 +4,70 @@
   "parameters": {
     "input": {
       "value": {
-        "Name": "Deny-MachineLearning-ComputeCluster-Scale",
-        "ResourceType": "Microsoft.Authorization/policyDefinitions",
-        "Properties": {
-          "Description": "Enforce scale settings for Azure Machine Learning compute clusters.",
-          "DisplayName": "Enforce scale settings for Azure Machine Learning compute clusters",
-          "Metadata": {
-            "version": "1.0.0",
-            "category": "Budget",
-            "source": "https://github.com/Azure/Enterprise-Scale/",
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "Deny-MachineLearning-ComputeCluster-Scale",
+        "properties": {
+          "description": "Enforce scale settings for Azure Machine Learning compute clusters.",
+          "displayName": "Enforce scale settings for Azure Machine Learning compute clusters",
+          "metadata": {
             "alzCloudEnvironments": [
               "AzureCloud"
-            ]
+            ],
+            "category": "Budget",
+            "source": "https://github.com/Azure/Enterprise-Scale/",
+            "version": "1.0.0"
           },
-          "Mode": "Indexed",
-          "Parameters": {
+          "mode": "Indexed",
+          "parameters": {
             "effect": {
-              "type": "String",
-              "metadata": {
-                "displayName": "Effect",
-                "description": "Enable or disable the execution of the policy"
-              },
               "allowedValues": [
                 "Audit",
                 "Disabled",
                 "Deny"
               ],
-              "defaultValue": "Deny"
+              "defaultValue": "Deny",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
             },
             "maxNodeCount": {
-              "type": "Integer",
+              "defaultValue": 10,
               "metadata": {
-                "displayName": "Maximum Node Count",
-                "description": "Specifies the maximum node count of AML Clusters"
+                "description": "Specifies the maximum node count of AML Clusters",
+                "displayName": "Maximum Node Count"
               },
-              "defaultValue": 10
-            },
-            "minNodeCount": {
-              "type": "Integer",
-              "metadata": {
-                "displayName": "Minimum Node Count",
-                "description": "Specifies the minimum node count of AML Clusters"
-              },
-              "defaultValue": 0
+              "type": "Integer"
             },
             "maxNodeIdleTimeInSecondsBeforeScaleDown": {
-              "type": "Integer",
+              "defaultValue": 900,
               "metadata": {
-                "displayName": "Maximum Node Idle Time in Seconds Before Scaledown",
-                "description": "Specifies the maximum node idle time in seconds before scaledown"
+                "description": "Specifies the maximum node idle time in seconds before scaledown",
+                "displayName": "Maximum Node Idle Time in Seconds Before Scaledown"
               },
-              "defaultValue": 900
+              "type": "Integer"
+            },
+            "minNodeCount": {
+              "defaultValue": 0,
+              "metadata": {
+                "description": "Specifies the minimum node count of AML Clusters",
+                "displayName": "Minimum Node Count"
+              },
+              "type": "Integer"
             }
           },
-          "PolicyRule": {
+          "policyRule": {
             "if": {
               "allOf": [
                 {
-                  "field": "type",
-                  "equals": "Microsoft.MachineLearningServices/workspaces/computes"
+                  "equals": "Microsoft.MachineLearningServices/workspaces/computes",
+                  "field": "type"
                 },
                 {
-                  "field": "Microsoft.MachineLearningServices/workspaces/computes/computeType",
-                  "equals": "AmlCompute"
+                  "equals": "AmlCompute",
+                  "field": "Microsoft.MachineLearningServices/workspaces/computes/computeType"
                 },
                 {
                   "anyOf": [
@@ -79,8 +80,8 @@
                       "greater": "[parameters('minNodeCount')]"
                     },
                     {
-                      "value": "[int(last(split(replace(replace(replace(replace(replace(replace(replace(field('Microsoft.MachineLearningServices/workspaces/computes/scaleSettings.nodeIdleTimeBeforeScaleDown'), 'P', '/'), 'Y', '/'), 'M', '/'), 'D', '/'), 'T', '/'), 'H', '/'), 'S', ''), '/')))]",
-                      "greater": "[parameters('maxNodeIdleTimeInSecondsBeforeScaleDown')]"
+                      "greater": "[parameters('maxNodeIdleTimeInSecondsBeforeScaleDown')]",
+                      "value": "[int(last(split(replace(replace(replace(replace(replace(replace(replace(field('Microsoft.MachineLearningServices/workspaces/computes/scaleSettings.nodeIdleTimeBeforeScaleDown'), 'P', '/'), 'Y', '/'), 'M', '/'), 'D', '/'), 'T', '/'), 'H', '/'), 'S', ''), '/')))]"
                     }
                   ]
                 }
@@ -90,7 +91,8 @@
               "effect": "[parameters('effect')]"
             }
           }
-        }
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
       }
     }
   }

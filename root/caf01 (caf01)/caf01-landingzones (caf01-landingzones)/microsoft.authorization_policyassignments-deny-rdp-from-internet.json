@@ -12,17 +12,16 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "Deny-RDP-from-internet",
+      "kind": "policyassignments",
       "apiVersion": "2022-06-01",
-      "location": null,
+      "location": "global",
       "properties": {
-        "Description": "This policy denies any network security rule that allows RDP access from Internet",
-        "DisplayName": "RDP access from the Internet should be blocked",
-        "EnforcementMode": "Default",
-        "NonComplianceMessages": null,
-        "NotScopes": null,
-        "Parameters": null,
-        "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/CAF01/providers/Microsoft.Authorization/policyDefinitions/Deny-RDP-From-Internet",
-        "Scope": "/providers/Microsoft.Management/managementGroups/CAF01-landingzones"
+        "description": "This policy denies any network security rule that allows RDP access from Internet",
+        "displayName": "RDP access from the Internet should be blocked",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/CAF01/providers/Microsoft.Authorization/policyDefinitions/Deny-RDP-From-Internet",
+        "scope": "/providers/Microsoft.Management/managementGroups/CAF01-landingzones"
       }
     }
   ],

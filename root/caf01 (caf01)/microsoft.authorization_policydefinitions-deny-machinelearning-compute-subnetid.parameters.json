@@ -4,41 +4,42 @@
   "parameters": {
     "input": {
       "value": {
-        "Name": "Deny-MachineLearning-Compute-SubnetId",
-        "ResourceType": "Microsoft.Authorization/policyDefinitions",
-        "Properties": {
-          "Description": "Enforce subnet connectivity for Azure Machine Learning compute clusters and compute instances.",
-          "DisplayName": "Enforce subnet connectivity for Azure Machine Learning compute clusters and compute instances",
-          "Metadata": {
-            "version": "1.0.0",
-            "category": "Machine Learning",
-            "source": "https://github.com/Azure/Enterprise-Scale/",
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "Deny-MachineLearning-Compute-SubnetId",
+        "properties": {
+          "description": "Enforce subnet connectivity for Azure Machine Learning compute clusters and compute instances.",
+          "displayName": "Enforce subnet connectivity for Azure Machine Learning compute clusters and compute instances",
+          "metadata": {
             "alzCloudEnvironments": [
               "AzureCloud"
-            ]
+            ],
+            "category": "Machine Learning",
+            "source": "https://github.com/Azure/Enterprise-Scale/",
+            "version": "1.0.0"
           },
-          "Mode": "Indexed",
-          "Parameters": {
+          "mode": "Indexed",
+          "parameters": {
             "effect": {
-              "type": "String",
-              "metadata": {
-                "displayName": "Effect",
-                "description": "Enable or disable the execution of the policy"
-              },
               "allowedValues": [
                 "Audit",
                 "Disabled",
                 "Deny"
               ],
-              "defaultValue": "Deny"
+              "defaultValue": "Deny",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
             }
           },
-          "PolicyRule": {
+          "policyRule": {
             "if": {
               "allOf": [
                 {
-                  "field": "type",
-                  "equals": "Microsoft.MachineLearningServices/workspaces/computes"
+                  "equals": "Microsoft.MachineLearningServices/workspaces/computes",
+                  "field": "type"
                 },
                 {
                   "field": "Microsoft.MachineLearningServices/workspaces/computes/computeType",
@@ -50,12 +51,12 @@
                 {
                   "anyOf": [
                     {
-                      "field": "Microsoft.MachineLearningServices/workspaces/computes/subnet.id",
-                      "exists": false
+                      "exists": false,
+                      "field": "Microsoft.MachineLearningServices/workspaces/computes/subnet.id"
                     },
                     {
-                      "value": "[empty(field('Microsoft.MachineLearningServices/workspaces/computes/subnet.id'))]",
-                      "equals": true
+                      "equals": true,
+                      "value": "[empty(field('Microsoft.MachineLearningServices/workspaces/computes/subnet.id'))]"
                     }
                   ]
                 }
@@ -65,7 +66,8 @@
               "effect": "[parameters('effect')]"
             }
           }
-        }
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
       }
     }
   }

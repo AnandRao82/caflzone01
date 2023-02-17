@@ -4,41 +4,42 @@
   "parameters": {
     "input": {
       "value": {
-        "Name": "Deny-Databricks-Sku",
-        "ResourceType": "Microsoft.Authorization/policyDefinitions",
-        "Properties": {
-          "Description": "Enforces the use of Premium Databricks workspaces to make sure appropriate security features are available including Databricks Access Controls, Credential Passthrough and SCIM provisioning for AAD.",
-          "DisplayName": "Deny non-premium Databricks sku",
-          "Metadata": {
-            "version": "1.0.0",
-            "category": "Databricks",
-            "source": "https://github.com/Azure/Enterprise-Scale/",
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "Deny-Databricks-Sku",
+        "properties": {
+          "description": "Enforces the use of Premium Databricks workspaces to make sure appropriate security features are available including Databricks Access Controls, Credential Passthrough and SCIM provisioning for AAD.",
+          "displayName": "Deny non-premium Databricks sku",
+          "metadata": {
             "alzCloudEnvironments": [
               "AzureCloud"
-            ]
+            ],
+            "category": "Databricks",
+            "source": "https://github.com/Azure/Enterprise-Scale/",
+            "version": "1.0.0"
           },
-          "Mode": "Indexed",
-          "Parameters": {
+          "mode": "Indexed",
+          "parameters": {
             "effect": {
-              "type": "String",
-              "metadata": {
-                "displayName": "Effect",
-                "description": "Enable or disable the execution of the policy"
-              },
               "allowedValues": [
                 "Audit",
                 "Disabled",
                 "Deny"
               ],
-              "defaultValue": "Deny"
+              "defaultValue": "Deny",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
             }
           },
-          "PolicyRule": {
+          "policyRule": {
             "if": {
               "allOf": [
                 {
-                  "field": "type",
-                  "equals": "Microsoft.Databricks/workspaces"
+                  "equals": "Microsoft.Databricks/workspaces",
+                  "field": "type"
                 },
                 {
                   "field": "Microsoft.DataBricks/workspaces/sku.name",
@@ -50,7 +51,8 @@
               "effect": "[parameters('effect')]"
             }
           }
-        }
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
       }
     }
   }

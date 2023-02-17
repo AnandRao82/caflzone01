@@ -4,40 +4,23 @@
   "parameters": {
     "input": {
       "value": {
-        "Name": "Deny-MachineLearning-Compute-VmSize",
-        "ResourceType": "Microsoft.Authorization/policyDefinitions",
-        "Properties": {
-          "Description": "Limit allowed vm sizes for Azure Machine Learning compute clusters and compute instances.",
-          "DisplayName": "Limit allowed vm sizes for Azure Machine Learning compute clusters and compute instances",
-          "Metadata": {
-            "version": "1.0.0",
-            "category": "Budget",
-            "source": "https://github.com/Azure/Enterprise-Scale/",
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "Deny-MachineLearning-Compute-VmSize",
+        "properties": {
+          "description": "Limit allowed vm sizes for Azure Machine Learning compute clusters and compute instances.",
+          "displayName": "Limit allowed vm sizes for Azure Machine Learning compute clusters and compute instances",
+          "metadata": {
             "alzCloudEnvironments": [
               "AzureCloud"
-            ]
+            ],
+            "category": "Budget",
+            "source": "https://github.com/Azure/Enterprise-Scale/",
+            "version": "1.0.0"
           },
-          "Mode": "Indexed",
-          "Parameters": {
-            "effect": {
-              "type": "String",
-              "metadata": {
-                "displayName": "Effect",
-                "description": "Enable or disable the execution of the policy"
-              },
-              "allowedValues": [
-                "Audit",
-                "Disabled",
-                "Deny"
-              ],
-              "defaultValue": "Deny"
-            },
+          "mode": "Indexed",
+          "parameters": {
             "allowedVmSizes": {
-              "type": "Array",
-              "metadata": {
-                "displayName": "Allowed VM Sizes for Aml Compute Clusters and Instances",
-                "description": "Specifies the allowed VM Sizes for Aml Compute Clusters and Instances"
-              },
               "defaultValue": [
                 "Standard_D1_v2",
                 "Standard_D2_v2",
@@ -119,15 +102,33 @@
                 "Standard_NV12s_v3",
                 "Standard_NV24s_v3",
                 "Standard_NV48s_v3"
-              ]
+              ],
+              "metadata": {
+                "description": "Specifies the allowed VM Sizes for Aml Compute Clusters and Instances",
+                "displayName": "Allowed VM Sizes for Aml Compute Clusters and Instances"
+              },
+              "type": "Array"
+            },
+            "effect": {
+              "allowedValues": [
+                "Audit",
+                "Disabled",
+                "Deny"
+              ],
+              "defaultValue": "Deny",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
             }
           },
-          "PolicyRule": {
+          "policyRule": {
             "if": {
               "allOf": [
                 {
-                  "field": "type",
-                  "equals": "Microsoft.MachineLearningServices/workspaces/computes"
+                  "equals": "Microsoft.MachineLearningServices/workspaces/computes",
+                  "field": "type"
                 },
                 {
                   "field": "Microsoft.MachineLearningServices/workspaces/computes/computeType",
@@ -146,7 +147,8 @@
               "effect": "[parameters('effect')]"
             }
           }
-        }
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
       }
     }
   }

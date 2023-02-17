@@ -12,22 +12,22 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "Enforce-TLS-SSL",
+      "kind": "policyassignments",
       "apiVersion": "2022-06-01",
       "location": "westus",
       "identity": {
-        "PrincipalId": "8c78eac7-9517-4a2b-91d5-6bcd16199ec8",
-        "TenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
-        "Type": "SystemAssigned"
+        "principalId": "8c78eac7-9517-4a2b-91d5-6bcd16199ec8",
+        "tenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
+        "type": "SystemAssigned"
       },
       "properties": {
-        "Description": "Choose either Deploy if not exist and append in combination with audit or Select Deny in the Policy effect. Deny polices shift left. Deploy if not exist and append enforce but can be changed, and because missing exsistense condition require then the combination of Audit.",
-        "DisplayName": "Deny or Deploy and append TLS requirements and SSL enforcement on resources without Encryption in transit",
-        "EnforcementMode": "Default",
-        "NonComplianceMessages": null,
-        "NotScopes": null,
-        "Parameters": {},
-        "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/CAF01/providers/Microsoft.Authorization/policySetDefinitions/Enforce-EncryptTransit",
-        "Scope": "/providers/Microsoft.Management/managementGroups/CAF01-landingzones"
+        "description": "Choose either Deploy if not exist and append in combination with audit or Select Deny in the Policy effect. Deny polices shift left. Deploy if not exist and append enforce but can be changed, and because missing exsistense condition require then the combination of Audit.",
+        "displayName": "Deny or Deploy and append TLS requirements and SSL enforcement on resources without Encryption in transit",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "parameters": {},
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/CAF01/providers/Microsoft.Authorization/policySetDefinitions/Enforce-EncryptTransit",
+        "scope": "/providers/Microsoft.Management/managementGroups/CAF01-landingzones"
       }
     }
   ],

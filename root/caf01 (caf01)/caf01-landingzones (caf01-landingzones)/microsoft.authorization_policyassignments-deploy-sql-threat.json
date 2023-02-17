@@ -12,22 +12,21 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "Deploy-SQL-Threat",
+      "kind": "policyassignments",
       "apiVersion": "2022-06-01",
       "location": "westus",
       "identity": {
-        "PrincipalId": "df4d1ac9-dbe9-45fe-82a4-1569e53f09a7",
-        "TenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
-        "Type": "SystemAssigned"
+        "principalId": "df4d1ac9-dbe9-45fe-82a4-1569e53f09a7",
+        "tenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
+        "type": "SystemAssigned"
       },
       "properties": {
-        "Description": "This policy ensures that Threat Detection is enabled on SQL Servers.",
-        "DisplayName": "Deploy Threat Detection on SQL servers",
-        "EnforcementMode": "Default",
-        "NonComplianceMessages": null,
-        "NotScopes": null,
-        "Parameters": null,
-        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/36d49e87-48c4-4f2e-beed-ba4ed02b71f5",
-        "Scope": "/providers/Microsoft.Management/managementGroups/CAF01-landingzones"
+        "description": "This policy ensures that Threat Detection is enabled on SQL Servers.",
+        "displayName": "Deploy Threat Detection on SQL servers",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/36d49e87-48c4-4f2e-beed-ba4ed02b71f5",
+        "scope": "/providers/Microsoft.Management/managementGroups/CAF01-landingzones"
       }
     }
   ],

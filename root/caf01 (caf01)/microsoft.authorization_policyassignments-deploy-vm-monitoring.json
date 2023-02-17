@@ -12,26 +12,26 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "Deploy-VM-Monitoring",
+      "kind": "policyassignments",
       "apiVersion": "2022-06-01",
       "location": "westus",
       "identity": {
-        "PrincipalId": "e4af9da1-cdeb-468c-8376-805387b94ebe",
-        "TenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
-        "Type": "SystemAssigned"
+        "principalId": "e4af9da1-cdeb-468c-8376-805387b94ebe",
+        "tenantId": "40b38c33-39b8-44ac-82f4-c0195458f65d",
+        "type": "SystemAssigned"
       },
       "properties": {
-        "Description": "Enable Azure Monitor for the virtual machines (VMs) in the specified scope (management group, subscription or resource group). Takes Log Analytics workspace as parameter.",
-        "DisplayName": "Enable Azure Monitor for VMs",
-        "EnforcementMode": "Default",
-        "NonComplianceMessages": null,
-        "NotScopes": null,
-        "Parameters": {
+        "description": "Enable Azure Monitor for the virtual machines (VMs) in the specified scope (management group, subscription or resource group). Takes Log Analytics workspace as parameter.",
+        "displayName": "Enable Azure Monitor for VMs",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "parameters": {
           "logAnalytics_1": {
             "value": "/subscriptions/5f186fc0-90e2-42c0-8e38-708e90c4a14a/resourceGroups/CAF01-mgmt/providers/Microsoft.OperationalInsights/workspaces/CAF01-law"
           }
         },
-        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/55f3eceb-5573-4f18-9695-226972c6d74a",
-        "Scope": "/providers/Microsoft.Management/managementGroups/CAF01"
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/55f3eceb-5573-4f18-9695-226972c6d74a",
+        "scope": "/providers/Microsoft.Management/managementGroups/CAF01"
       }
     }
   ],

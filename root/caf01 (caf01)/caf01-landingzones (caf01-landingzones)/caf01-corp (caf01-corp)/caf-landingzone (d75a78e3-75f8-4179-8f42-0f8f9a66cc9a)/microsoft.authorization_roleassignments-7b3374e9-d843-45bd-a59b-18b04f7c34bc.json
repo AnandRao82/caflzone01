@@ -14,11 +14,10 @@
       "name": "7b3374e9-d843-45bd-a59b-18b04f7c34bc",
       "apiVersion": "2022-04-01",
       "properties": {
-        "DisplayName": null,
-        "ObjectType": "Unknown",
-        "PrincipalId": "1550326a-421d-4d3d-b92f-8e5ebbc51787",
-        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
-        "RoleDefinitionName": "Contributor"
+        "principalId": "1550326a-421d-4d3d-b92f-8e5ebbc51787",
+        "principalType": "Group",
+        "roleDefinitionId": "/subscriptions/d75a78e3-75f8-4179-8f42-0f8f9a66cc9a/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
+        "scope": "/subscriptions/d75a78e3-75f8-4179-8f42-0f8f9a66cc9a"
       }
     }
   ],
