@@ -213,6 +213,7 @@
           },
           "policyDefinitions": [
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -223,6 +224,7 @@
               "policyDefinitionReferenceId": "ACRCmkDeny"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -233,6 +235,7 @@
               "policyDefinitionReferenceId": "AksCmkDeny"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -243,6 +246,7 @@
               "policyDefinitionReferenceId": "WorkspaceCMK"
             },
             {
+              "definitionVersion": "2.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -253,6 +257,7 @@
               "policyDefinitionReferenceId": "CognitiveServicesCMK"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -263,6 +268,7 @@
               "policyDefinitionReferenceId": "CosmosCMKEffect"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -273,6 +279,7 @@
               "policyDefinitionReferenceId": "DataBoxCMKEffect"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -283,6 +290,7 @@
               "policyDefinitionReferenceId": "StreamAnalyticsCMKEffect"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -293,6 +301,7 @@
               "policyDefinitionReferenceId": "SynapseWorkspaceCMKEffect"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -303,6 +312,7 @@
               "policyDefinitionReferenceId": "StorageCMKEffect"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -313,6 +323,7 @@
               "policyDefinitionReferenceId": "MySQLCMKEffect"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -323,6 +334,7 @@
               "policyDefinitionReferenceId": "PostgreSQLCMKEffect"
             },
             {
+              "definitionVersion": "2.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -333,6 +345,7 @@
               "policyDefinitionReferenceId": "SqlServerTDECMKEffect"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -343,6 +356,7 @@
               "policyDefinitionReferenceId": "HealthcareAPIsCMKEffect"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -353,6 +367,7 @@
               "policyDefinitionReferenceId": "AzureBatchCMKEffect"
             },
             {
+              "definitionVersion": "2.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {

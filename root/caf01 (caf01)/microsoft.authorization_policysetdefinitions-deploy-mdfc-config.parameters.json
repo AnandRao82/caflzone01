@@ -130,6 +130,7 @@
           },
           "policyDefinitions": [
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -140,6 +141,7 @@
               "policyDefinitionReferenceId": "defenderForOssDb"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -150,6 +152,7 @@
               "policyDefinitionReferenceId": "defenderForVM"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -160,6 +163,7 @@
               "policyDefinitionReferenceId": "defenderForSqlServerVirtualMachines"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -170,6 +174,7 @@
               "policyDefinitionReferenceId": "defenderForAppServices"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -180,6 +185,7 @@
               "policyDefinitionReferenceId": "defenderForStorageAccounts"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -190,6 +196,7 @@
               "policyDefinitionReferenceId": "defenderforContainers"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -200,6 +207,7 @@
               "policyDefinitionReferenceId": "defenderForKeyVaults"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -210,6 +218,7 @@
               "policyDefinitionReferenceId": "defenderForDns"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -220,6 +229,7 @@
               "policyDefinitionReferenceId": "defenderForArm"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -230,6 +240,7 @@
               "policyDefinitionReferenceId": "defenderForSqlPaas"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -240,6 +251,7 @@
               "policyDefinitionReferenceId": "defenderForCosmosDbs"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "emailSecurityContact": {
@@ -250,6 +262,7 @@
               "policyDefinitionReferenceId": "securityEmailContact"
             },
             {
+              "definitionVersion": "4.*.*",
               "groupNames": [],
               "parameters": {
                 "resourceGroupLocation": {
