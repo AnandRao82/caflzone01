@@ -154,6 +154,7 @@
           },
           "policyDefinitions": [
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -164,6 +165,7 @@
               "policyDefinitionReferenceId": "CosmosDenyPaasPublicIP"
             },
             {
+              "definitionVersion": "3.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -174,6 +176,7 @@
               "policyDefinitionReferenceId": "KeyVaultDenyPaasPublicIP"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -184,6 +187,7 @@
               "policyDefinitionReferenceId": "SqlServerDenyPaasPublicIP"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -194,6 +198,7 @@
               "policyDefinitionReferenceId": "StorageDenyPaasPublicIP"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -204,6 +209,7 @@
               "policyDefinitionReferenceId": "AKSDenyPaasPublicIP"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -214,6 +220,7 @@
               "policyDefinitionReferenceId": "ACRDenyPaasPublicIP"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -224,6 +231,7 @@
               "policyDefinitionReferenceId": "AFSDenyPaasPublicIP"
             },
             {
+              "definitionVersion": "3.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -234,6 +242,7 @@
               "policyDefinitionReferenceId": "PostgreSQLFlexDenyPublicIP"
             },
             {
+              "definitionVersion": "2.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -244,6 +253,7 @@
               "policyDefinitionReferenceId": "MySQLFlexDenyPublicIP"
             },
             {
+              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
