@@ -379,7 +379,6 @@
           },
           "policyDefinitions": [
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -390,7 +389,6 @@
               "policyDefinitionReferenceId": "AppServiceHttpEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -404,7 +402,6 @@
               "policyDefinitionReferenceId": "AppServiceminTlsVersion"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -415,7 +412,6 @@
               "policyDefinitionReferenceId": "APIAppServiceLatestTlsEffect"
             },
             {
-              "definitionVersion": "2.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -426,7 +422,6 @@
               "policyDefinitionReferenceId": "FunctionLatestTlsEffect"
             },
             {
-              "definitionVersion": "2.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -437,7 +432,6 @@
               "policyDefinitionReferenceId": "WebAppServiceLatestTlsEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -448,7 +442,6 @@
               "policyDefinitionReferenceId": "APIAppServiceHttpsEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -459,7 +452,6 @@
               "policyDefinitionReferenceId": "FunctionServiceHttpsEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -470,7 +462,6 @@
               "policyDefinitionReferenceId": "WebAppServiceHttpsEffect"
             },
             {
-              "definitionVersion": "8.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -481,7 +472,6 @@
               "policyDefinitionReferenceId": "AKSIngressHttpsOnlyEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -495,7 +485,6 @@
               "policyDefinitionReferenceId": "MySQLEnableSSLDeployEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -509,7 +498,6 @@
               "policyDefinitionReferenceId": "MySQLEnableSSLEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -523,7 +511,6 @@
               "policyDefinitionReferenceId": "PostgreSQLEnableSSLDeployEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -537,7 +524,6 @@
               "policyDefinitionReferenceId": "PostgreSQLEnableSSLEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -551,7 +537,6 @@
               "policyDefinitionReferenceId": "RedisTLSDeployEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -562,7 +547,6 @@
               "policyDefinitionReferenceId": "RedisdisableNonSslPort"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -576,7 +560,6 @@
               "policyDefinitionReferenceId": "RedisDenyhttps"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -590,7 +573,6 @@
               "policyDefinitionReferenceId": "SQLManagedInstanceTLSDeployEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -604,7 +586,6 @@
               "policyDefinitionReferenceId": "SQLManagedInstanceTLSEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -618,7 +599,6 @@
               "policyDefinitionReferenceId": "SQLServerTLSDeployEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -632,7 +612,6 @@
               "policyDefinitionReferenceId": "SQLServerTLSEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -646,7 +625,6 @@
               "policyDefinitionReferenceId": "StorageHttpsEnabledEffect"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
