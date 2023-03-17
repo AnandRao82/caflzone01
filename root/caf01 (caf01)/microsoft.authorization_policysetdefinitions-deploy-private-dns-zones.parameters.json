@@ -208,7 +208,6 @@
           },
           "policyDefinitions": [
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -222,7 +221,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-File-Sync"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -236,7 +234,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-Web"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -250,7 +247,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-Batch"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -264,7 +260,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-App"
             },
             {
-              "definitionVersion": "1.*.*-preview",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -278,7 +273,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-Site-Recovery"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -292,7 +286,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-IoT"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -306,7 +299,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-KeyVault"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -320,7 +312,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-SignalR"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -334,7 +325,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-AppServices"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -348,7 +338,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-EventGridTopics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -362,7 +351,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-DiskAccess"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -376,7 +364,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-CognitiveServices"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -390,7 +377,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-IoTHubs"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -404,7 +390,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-EventGridDomains"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -418,7 +403,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-RedisCache"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -432,7 +416,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-ACR"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -446,7 +429,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-EventHubNamespace"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -460,7 +442,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-MachineLearningWorkspace"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -474,7 +455,6 @@
               "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-ServiceBusNamespace"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {

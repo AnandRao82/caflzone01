@@ -808,7 +808,6 @@
           },
           "policyDefinitions": [
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -822,7 +821,6 @@
               "policyDefinitionReferenceId": "StorageAccountDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -839,7 +837,6 @@
               "policyDefinitionReferenceId": "AVDScalingPlansDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -856,7 +853,6 @@
               "policyDefinitionReferenceId": "WVDAppGroupDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -873,7 +869,6 @@
               "policyDefinitionReferenceId": "WVDWorkspaceDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -890,7 +885,6 @@
               "policyDefinitionReferenceId": "WVDHostPoolsDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -907,7 +901,6 @@
               "policyDefinitionReferenceId": "ACIDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -924,7 +917,6 @@
               "policyDefinitionReferenceId": "ACRDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "3.*.*",
               "groupNames": [],
               "parameters": {
                 "diagnosticsSettingNameToUse": {
@@ -941,7 +933,6 @@
               "policyDefinitionReferenceId": "AKSDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -958,7 +949,6 @@
               "policyDefinitionReferenceId": "AnalysisServiceDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -975,7 +965,6 @@
               "policyDefinitionReferenceId": "APIforFHIRDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -992,7 +981,6 @@
               "policyDefinitionReferenceId": "APIMgmtDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1009,7 +997,6 @@
               "policyDefinitionReferenceId": "ApplicationGatewayDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1026,7 +1013,6 @@
               "policyDefinitionReferenceId": "AutomationDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1043,7 +1029,6 @@
               "policyDefinitionReferenceId": "BastionDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1060,7 +1045,6 @@
               "policyDefinitionReferenceId": "BatchDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1077,7 +1061,6 @@
               "policyDefinitionReferenceId": "CDNEndpointsDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1094,7 +1077,6 @@
               "policyDefinitionReferenceId": "CognitiveServicesDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1111,7 +1093,6 @@
               "policyDefinitionReferenceId": "CosmosDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1128,7 +1109,6 @@
               "policyDefinitionReferenceId": "DatabricksDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1145,7 +1125,6 @@
               "policyDefinitionReferenceId": "DataExplorerClusterDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1162,7 +1141,6 @@
               "policyDefinitionReferenceId": "DataFactoryDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1179,7 +1157,6 @@
               "policyDefinitionReferenceId": "DataLakeStoreDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1196,7 +1173,6 @@
               "policyDefinitionReferenceId": "DataLakeAnalyticsDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1213,7 +1189,6 @@
               "policyDefinitionReferenceId": "EventGridSubDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1230,7 +1205,6 @@
               "policyDefinitionReferenceId": "EventGridTopicDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "2.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1247,7 +1221,6 @@
               "policyDefinitionReferenceId": "EventHubDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1264,7 +1237,6 @@
               "policyDefinitionReferenceId": "EventSystemTopicDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1281,7 +1253,6 @@
               "policyDefinitionReferenceId": "ExpressRouteDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1298,7 +1269,6 @@
               "policyDefinitionReferenceId": "FirewallDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1315,7 +1285,6 @@
               "policyDefinitionReferenceId": "FrontDoorDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1332,7 +1301,6 @@
               "policyDefinitionReferenceId": "FunctionAppDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1349,7 +1317,6 @@
               "policyDefinitionReferenceId": "HDInsightDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1366,7 +1333,6 @@
               "policyDefinitionReferenceId": "IotHubDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "3.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1383,7 +1349,6 @@
               "policyDefinitionReferenceId": "KeyVaultDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1400,7 +1365,6 @@
               "policyDefinitionReferenceId": "LoadBalancerDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1417,7 +1381,6 @@
               "policyDefinitionReferenceId": "LogAnalyticsDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1434,7 +1397,6 @@
               "policyDefinitionReferenceId": "LogicAppsISEDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1451,7 +1413,6 @@
               "policyDefinitionReferenceId": "LogicAppsWFDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1468,7 +1429,6 @@
               "policyDefinitionReferenceId": "MariaDBDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1485,7 +1445,6 @@
               "policyDefinitionReferenceId": "MediaServiceDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1502,7 +1461,6 @@
               "policyDefinitionReferenceId": "MlWorkspaceDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1519,7 +1477,6 @@
               "policyDefinitionReferenceId": "MySQLDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1536,7 +1493,6 @@
               "policyDefinitionReferenceId": "NetworkSecurityGroupsDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1553,7 +1509,6 @@
               "policyDefinitionReferenceId": "NetworkNICDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1570,7 +1525,6 @@
               "policyDefinitionReferenceId": "PostgreSQLDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1587,7 +1541,6 @@
               "policyDefinitionReferenceId": "PowerBIEmbeddedDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1607,7 +1560,6 @@
               "policyDefinitionReferenceId": "NetworkPublicIPNicDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "logAnalytics": {
@@ -1621,7 +1573,6 @@
               "policyDefinitionReferenceId": "RecoveryVaultDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1638,7 +1589,6 @@
               "policyDefinitionReferenceId": "RedisCacheDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1655,7 +1605,6 @@
               "policyDefinitionReferenceId": "RelayDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1672,7 +1621,6 @@
               "policyDefinitionReferenceId": "SearchServicesDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "2.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1689,7 +1637,6 @@
               "policyDefinitionReferenceId": "ServiceBusDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1706,7 +1653,6 @@
               "policyDefinitionReferenceId": "SignalRDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "4.*.*",
               "groupNames": [],
               "parameters": {
                 "diagnosticsSettingNameToUse": {
@@ -1723,7 +1669,6 @@
               "policyDefinitionReferenceId": "SQLDatabaseDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1740,7 +1685,6 @@
               "policyDefinitionReferenceId": "SQLElasticPoolsDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1757,7 +1701,6 @@
               "policyDefinitionReferenceId": "SQLMDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1774,7 +1717,6 @@
               "policyDefinitionReferenceId": "StreamAnalyticsDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1791,7 +1733,6 @@
               "policyDefinitionReferenceId": "TimeSeriesInsightsDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1808,7 +1749,6 @@
               "policyDefinitionReferenceId": "TrafficManagerDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1825,7 +1765,6 @@
               "policyDefinitionReferenceId": "VirtualNetworkDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1842,7 +1781,6 @@
               "policyDefinitionReferenceId": "VirtualMachinesDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1859,7 +1797,6 @@
               "policyDefinitionReferenceId": "VMSSDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1876,7 +1813,6 @@
               "policyDefinitionReferenceId": "VNetGWDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
@@ -1893,7 +1829,6 @@
               "policyDefinitionReferenceId": "AppServiceDeployDiagnosticLogDeployLogAnalytics"
             },
             {
-              "definitionVersion": "1.*.*",
               "groupNames": [],
               "parameters": {
                 "effect": {
