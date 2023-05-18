@@ -11,7 +11,7 @@
   "resources": [
     {
       "type": "Microsoft.Management/managementGroups/subscriptions",
-      "name": "CAF01-identity/a9dc0037-d6c1-4fb1-8da6-b40cdd6ea464",
+      "name": "CAF01-connectivity/a9dc0037-d6c1-4fb1-8da6-b40cdd6ea464",
       "apiVersion": "2021-04-01",
       "scope": "/"
     }

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "5f49ab9510e3e5e22f3e32c3b4a591f63eff81e3dea8e32374c4e927a2e6672e",
+      "kind": "policyassignments",
+      "apiVersion": "2022-06-01",
+      "location": "global",
+      "properties": {
+        "displayName": "Deny vNet peering to non-approved vNets",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "notScopes": [],
+        "parameters": {
+          "allowedVnets": {
+            "value": []
+          },
+          "effect": {
+            "value": "Deny"
+          }
+        },
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/CAF01/providers/Microsoft.Authorization/policyDefinitions/Deny-VNET-Peering-To-Non-Approved-VNETs",
+        "scope": "/subscriptions/a9dc0037-d6c1-4fb1-8da6-b40cdd6ea464"
+      }
+    }
+  ],
+  "outputs": {}
+}
