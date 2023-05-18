@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "ad9176c0404546a8ede51b287a07394285fa89c0264550f92e717aa0d2113cba",
+      "kind": "policyassignments",
+      "apiVersion": "2022-06-01",
+      "location": "global",
+      "properties": {
+        "displayName": "Deny the creation of private DNS",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "notScopes": [],
+        "parameters": {
+          "effect": {
+            "value": "Deny"
+          }
+        },
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/CAF01/providers/Microsoft.Authorization/policyDefinitions/Deny-Private-DNS-Zones",
+        "scope": "/subscriptions/a9dc0037-d6c1-4fb1-8da6-b40cdd6ea464"
+      }
+    }
+  ],
+  "outputs": {}
+}
